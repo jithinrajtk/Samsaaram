@@ -29,9 +29,9 @@ public class FeedbackActivity extends AppCompatActivity {
 
                 if (et_email.getText().toString() == "" && et_feedback.getText().toString() == "") {
                     sendFeedback(et_email.getText().toString(), et_feedback.getText().toString());
-                    toaster("Please select your E-Mail client to send the feedback to me!", Toast.LENGTH_LONG);
+                    toaster("ഫീഡ്ബാക്ക് അയയ്ക്കുന്നതിന് ദയവായി നിങ്ങളുടെ ഇ-മെയിൽ ക്ലയന്റ് തിരഞ്ഞെടുക്കുക!", Toast.LENGTH_LONG);
                 } else {
-                    toaster("Fields cannot be empty. Please input the details to send feedback", Toast.LENGTH_LONG);
+                    toaster("ഫീൽഡുകൾ ശൂന്യമാക്കിയിടാൻ പാടില്ല. ഫീഡ്ബാക്ക് അയയ്ക്കുന്നതിന് ദയവായി വിശദാംശങ്ങൾ ടൈപ്പ് ചെയ്യുക!", Toast.LENGTH_LONG);
                 }
             }
         });
@@ -45,7 +45,7 @@ public class FeedbackActivity extends AppCompatActivity {
     private void sendFeedback(String senderEmailAddress, String feedbackContent) {
         final Intent intent = new Intent(android.content.Intent.ACTION_SEND);
         intent.setType("text/email")
-                .putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"kesav.tc8@gmail.com"})
+                .putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"jithinrajtk@gmail.com"})
                 .putExtra(android.content.Intent.EXTRA_SUBJECT, getString(R.string.app_name) + "[User Feedback]")
                 .putExtra(android.content.Intent.EXTRA_TEXT, "Hi,\nReply To: " + senderEmailAddress + "\nContent:\n" + feedbackContent);
         startActivity(Intent.createChooser(intent, "Feedback"));
