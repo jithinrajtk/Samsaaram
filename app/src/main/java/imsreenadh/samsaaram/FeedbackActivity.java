@@ -20,6 +20,8 @@ public class FeedbackActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         findViewById(R.id.btnFeedback).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +38,7 @@ public class FeedbackActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void toaster(String message, int duration) {
         Toast.makeText(getApplicationContext(), message, duration).show();
