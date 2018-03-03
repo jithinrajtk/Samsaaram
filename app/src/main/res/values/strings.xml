@@ -27,6 +27,6 @@
     <string name="action_feedback">Feedback</string>
     <string name="provide_feedback">Feel like suggesting?</string>
     <string name="e_mail">E-mail Address</string>
-    <string name="suggestion" >Suggestion and Feedback</string>
+    <string name="suggestion">Suggestion and Feedback</string>
     <string name="send_feedback">Send Feedback</string>
 </resources>
